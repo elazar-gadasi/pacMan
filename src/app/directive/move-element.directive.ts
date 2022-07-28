@@ -39,7 +39,7 @@ export class MoveElementDirective {
   movElement(element: ElementRef) {
     if (this.#up === true) {
       this.counter--;
-      element.nativeElement.style.bottom = this.counter + 'px';
+      element.nativeElement.style.top = this.counter + 'px';
       console.log(this.counter);
       if (this.counter === 0) this.counter++;
       if (this.counter2 === 0) this.counter2++;
@@ -60,13 +60,13 @@ export class MoveElementDirective {
       this.counter2++;
       element.nativeElement.style.left = this.counter2 + 'px';
 
-      if (this.counter === 540) this.counter--;
-      if (this.counter2 === 1000) this.counter2--;
+      if (this.counter === 500) this.counter--;
+      if (this.counter2 === 1200) this.counter2--;
       return;
     }
     if (this.#left === true) {
       this.counter2--;
-      element.nativeElement.style.right = this.counter2 + 'px';
+      element.nativeElement.style.left = this.counter2 + 'px';
       if (this.counter === 0) this.counter++;
       if (this.counter2 === 0) this.counter2++;
       return;
